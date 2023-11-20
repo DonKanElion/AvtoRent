@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/avtorent/static/css/main.7acaea2f.css",
-    "main.js": "/avtorent/static/js/main.07d3183d.js",
-    "index.html": "/avtorent/index.html",
-    "main.7acaea2f.css.map": "/avtorent/static/css/main.7acaea2f.css.map",
-    "main.07d3183d.js.map": "/avtorent/static/js/main.07d3183d.js.map"
+    "main.css": "/AvtoRent/static/css/main.7acaea2f.css",
+    "main.js": "/AvtoRent/static/js/main.07d3183d.js",
+    "index.html": "/AvtoRent/index.html",
+    "main.7acaea2f.css.map": "/AvtoRent/static/css/main.7acaea2f.css.map",
+    "main.07d3183d.js.map": "/AvtoRent/static/js/main.07d3183d.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
