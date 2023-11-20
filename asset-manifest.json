@@ -1,13 +1,30 @@
 {
   "files": {
-    "main.css": "/AvtoRent/static/css/main.7acaea2f.css",
-    "main.js": "/AvtoRent/static/js/main.07d3183d.js",
+    "main.css": "/AvtoRent/static/css/main.694fbd53.css",
+    "main.js": "/AvtoRent/static/js/main.b358c58d.js",
+    "static/css/52.2af2f8f8.chunk.css": "/AvtoRent/static/css/52.2af2f8f8.chunk.css",
+    "static/js/52.bdec44a3.chunk.js": "/AvtoRent/static/js/52.bdec44a3.chunk.js",
+    "static/css/364.c69721ef.chunk.css": "/AvtoRent/static/css/364.c69721ef.chunk.css",
+    "static/js/364.71bc2016.chunk.js": "/AvtoRent/static/js/364.71bc2016.chunk.js",
+    "static/css/721.54b174ad.chunk.css": "/AvtoRent/static/css/721.54b174ad.chunk.css",
+    "static/js/721.21bbd3c4.chunk.js": "/AvtoRent/static/js/721.21bbd3c4.chunk.js",
+    "static/js/969.19b46614.chunk.js": "/AvtoRent/static/js/969.19b46614.chunk.js",
+    "static/media/istockphoto-125419244-1024x1024.jpg": "/AvtoRent/static/media/istockphoto-125419244-1024x1024.8c7c4cf1146cc7b62210.jpg",
+    "static/media/1378262077_c1.jpg": "/AvtoRent/static/media/1378262077_c1.a9bdb263bf55e25de0ee.jpg",
+    "static/media/placeholder.png": "/AvtoRent/static/media/placeholder.e5143ea2ffb335983a04.png",
     "index.html": "/AvtoRent/index.html",
-    "main.7acaea2f.css.map": "/AvtoRent/static/css/main.7acaea2f.css.map",
-    "main.07d3183d.js.map": "/AvtoRent/static/js/main.07d3183d.js.map"
+    "main.694fbd53.css.map": "/AvtoRent/static/css/main.694fbd53.css.map",
+    "main.b358c58d.js.map": "/AvtoRent/static/js/main.b358c58d.js.map",
+    "52.2af2f8f8.chunk.css.map": "/AvtoRent/static/css/52.2af2f8f8.chunk.css.map",
+    "52.bdec44a3.chunk.js.map": "/AvtoRent/static/js/52.bdec44a3.chunk.js.map",
+    "364.c69721ef.chunk.css.map": "/AvtoRent/static/css/364.c69721ef.chunk.css.map",
+    "364.71bc2016.chunk.js.map": "/AvtoRent/static/js/364.71bc2016.chunk.js.map",
+    "721.54b174ad.chunk.css.map": "/AvtoRent/static/css/721.54b174ad.chunk.css.map",
+    "721.21bbd3c4.chunk.js.map": "/AvtoRent/static/js/721.21bbd3c4.chunk.js.map",
+    "969.19b46614.chunk.js.map": "/AvtoRent/static/js/969.19b46614.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7acaea2f.css",
-    "static/js/main.07d3183d.js"
+    "static/css/main.694fbd53.css",
+    "static/js/main.b358c58d.js"
   ]
 }

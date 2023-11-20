@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkavtorent=self.webpackChunkavtorent||[]).push([[52],{2052:function(e,n,r){r.r(n),r.d(n,{default:function(){return c}});var t="HomePage_container__S-kOo",a="HomePage_title__G4sQi",s=r(184);function c(){return(0,s.jsx)("div",{className:t,children:(0,s.jsx)("h1",{className:a,children:"Your rental car's service"})})}}}]);
+//# sourceMappingURL=52.bdec44a3.chunk.js.map
