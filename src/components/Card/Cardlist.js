@@ -12,19 +12,17 @@ export const CardList = () => {
   if (error) return <p>Error: {error.message}</p>;
 
   return (
-    <>
-      <ul className={css.list}>
-        {cars?.map(car => (
-          <CardlistItem key={car.id} props={car} cars={cars} />
-        ))}
-        {/* {isShowModal && (
-    <Modal
-      largeImageURL={largeImageURL}
-      tags={tags}
-      onClose={toggleModal}
-    />
-  )} */}
-      </ul>
-    </>
+    <ul className={css.list}>
+      {cars?.map(car => (
+        <CardlistItem key={car.id} props={car} cars={cars} />
+      ))}
+      {/* {isShowModal && (
+        <Modal
+          largeImageURL={largeImageURL}
+          tags={tags}
+          onClose={toggleModal}
+        />
+        )} */}
+    </ul>
   );
 };

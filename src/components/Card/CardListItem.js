@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import css from './CardList.module.css';
 import stop from '../../img/placeholder.png';
+import IconHeart from './icon';
 
 export const CardlistItem = ({ props }, cars) => {
   const {
@@ -10,7 +11,7 @@ export const CardlistItem = ({ props }, cars) => {
     year,
     rentalPrice,
     img,
-    address,
+    // address,
     rentalCompany,
     type,
     functionalities,
@@ -34,35 +35,41 @@ export const CardlistItem = ({ props }, cars) => {
   };
 
   return (
-    <li key={id} className={css.item}>
-      <img
-        src={img || stop}
-        alt={make}
-        className={css.image}
-        width="274"
-        height="268"
-        onError={event => (event.target.src = stop)}
-      />
-      <button
-        type="submit"
-        onClick={() => handleClickFavorite(props)}
-        className={css.iconBtn}
-        style={{ stroke: 'red' }}
-      >
-        <i className="fa fa-heart"></i>
-      </button>
+    <li className={css.item}>
+      <div className={css.thumb}>
+        <img
+          src={img || stop}
+          alt={make}
+          className={css.image}
+          width="274"
+          height="268"
+          onError={event => (event.target.src = stop)}
+        />
+        <button
+          type="submit"
+          onClick={() => handleClickFavorite(props)}
+          className={css.favoriteBtn}
+        >
+          <IconHeart
+            width="18"
+            height="18"
+            className={css.favoriteIcon}
+          ></IconHeart>
+        </button>
+      </div>
       <div className={css.footerCart}>
         <div className={css.modelTextWrapper}>
-          <p>{make}&nbsp;</p> <p className={css.model}>{model},&nbsp;</p>
+          <p>{make}&nbsp;</p>
+          <p className={css.model}>{model},&nbsp;</p>
           <p>{year}&nbsp;</p>
           <p className={css.price}>{rentalPrice}</p>
         </div>
 
         <div className={css.infoCar}>
-          <p>{address} |</p>
-          <p>{rentalCompany} |</p>
-          <p>{type} |</p>
-          <p>{id} |</p>
+          {/* <p>{address} |</p> */}
+          <p>{rentalCompany} | </p>
+          <p>{type} | </p>
+          <p>{id} | </p>
           <p>{functionalities[1]}</p>
         </div>
       </div>
