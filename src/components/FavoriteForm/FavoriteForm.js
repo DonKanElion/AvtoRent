@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { getFavoriteCars } from 'redux/selector';
-import CardList from 'components/Card/Cardlist';
+import { CardList } from 'components/Card/Cardlist';
 
 import BasicImg from '../../img/istockphoto-125419244-1024x1024.jpg';
 import css from './FavoriteForm.module.css';

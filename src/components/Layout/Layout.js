@@ -1,13 +1,18 @@
 import { Suspense } from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet, Link } from 'react-router-dom';
 import { Navigation } from 'components/Navigation/Navigation';
+import { ContactHeader } from 'components/ContactHeader/ContactHeader';
 import css from './Layout.module.css';
 
 const Layout = () => {
   return (
-    <div style={{ maxWidth: 1400, margin: '0 auto', padding: '16px' }}>
-      <header className={css.headernav}>
+    <body>
+      <header className={css.mainNav}>
+        <Link className={css.logo} to="/">
+          Avto<span>Rent</span>
+        </Link>
         <Navigation />
+        <ContactHeader />
       </header>
 
       <main>
@@ -15,7 +20,7 @@ const Layout = () => {
           <Outlet />
         </Suspense>
       </main>
-    </div>
+    </body>
   );
 };
 

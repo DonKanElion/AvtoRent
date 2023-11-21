@@ -1,49 +1,42 @@
-import { configureStore } from '@reduxjs/toolkit';
-import { carReducer } from './carSlice';
-import { carFavoriteReducer } from './carFavoriteSlice';
-// import { filterReducer } from './filterSlice.js';
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
+import { setupListeners } from '@reduxjs/toolkit/query';
 
-export const store = configureStore({
-  reducer: {
-    cars: carReducer,
-    carsFavorite: carFavoriteReducer,
-    // filter: filterReducer,
-  },
+import { carsApi } from './carsSlice';
+import { favoriteCarsReducer } from './favoriteCarsSlice';
+
+import {
+  persistStore,
+  persistReducer,
+  FLUSH,
+  REHYDRATE,
+  PAUSE,
+  PERSIST,
+  PURGE,
+  REGISTER,
+} from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
+
+const persistConfig = {
+  key: 'favorite',
+  storage,
+};
+
+const rootReducer = combineReducers({
+  [carsApi.reducerPath]: carsApi.reducer,
+  favorite: persistReducer(persistConfig, favoriteCarsReducer),
 });
 
-// // import storage from 'redux-persist/lib/storage'; // defaults to localStorage for web
-// import {
-//   persistStore,
-//   FLUSH,
-//   REHYDRATE,
-//   PAUSE,
-//   PERSIST,
-//   PURGE,
-//   REGISTER,
-// } from 'redux-persist';
-// import { configureStore } from '@reduxjs/toolkit';
-// import { carReducer } from './carSlice';
-// // import { contactReducer } from '../redux/contacts/contactSlice.js';
-// // import { filterReducer } from '../redux/contacts/filterSlice.js';
+export const store = configureStore({
+  reducer: rootReducer,
+  middleware: getDefaultMiddleware => [
+    ...getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+      },
+    }),
+    carsApi.middleware,
+  ],
+});
 
-// // const authPersistConfig = {
-// //   key: 'auth',
-// //   storage,
-// //   whitelist: ['token'],
-// // };
-
-// export const store = configureStore({
-//   reducer: {
-//     // auth: persistReducer(authPersistConfig, authReducer),
-//     cars: carReducer,
-//     // filter: filterReducer,
-//   },
-//   middleware: getDefaultMiddleware =>
-//     getDefaultMiddleware({
-//       serializableCheck: {
-//         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
-//       },
-//     }),
-// });
-
-// export const persistor = persistStore(store);
+export const persistor = persistStore(store);
+setupListeners(store.dispatch);
